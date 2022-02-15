@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card hover effect</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style type="text/css">
+        body{
+            background-color: #2c3e50;
+            font-family: loto;
+        }
+        .details{
+            margin: 20px 0;
+            background-color: #FFF;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 1;
+            transition: 0.6s all;
+        }
+        .details h2{
+            font-size: 22px;
+            text-transform: uppercase;
+            transition: 0.6s all;
+        }
+        .details p{
+            font-size: 14px;
+            transition: 0.6s all;
+        }
+        .details a{
+            text-decoration: none;
+            text-transform: capitalize;
+            color: #FFF;
+            background-color: #2c3e50;
+            padding: 6px 12px;
+            display: inline block;
+            font-size: 14px;
+            border: 1px solid #2c3e50;
+        }
+        .details::before{
+            content: "";
+            width: 2%;
+            height: 100%;
+            background-color: #ff5722;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: 0.6s all;
+        }
+        .details:hover::before{
+            width: 100%;
+        }
+         .details:hover h2{
+            color: #FFF;
+         }
+         .details:hover p{
+            color: #FFF;
+         }
+         .details:hover a{
+             background-color: transparent;
+             border: 1px solid #FFF;
+         }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="details">
+                    <h2>Heading 1</h2>
+                    <p>Paragraph 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    numquam blanditiis
+                </p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="details">
+                    <h2>Heading 2</h2>
+                    <p>Paragraph 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    numquam blanditiis
+                    </p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="details">
+                    <h2>Heading 3</h2>
+                    <p> Paragraph 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis
+                    </p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
